@@ -1,6 +1,4 @@
 
-#include "afxres.h"
-
 // icon resource
 dosbox_ico ICON "dosbox.ico"
 
