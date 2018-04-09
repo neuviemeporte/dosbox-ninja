@@ -1513,7 +1513,7 @@ SDL_Surface *DX5_SetVideoMode(_THIS, SDL_Surface *current,
 			}
 		}
 		dd_surface3 = NULL;
-#if 0 /* FIXME: enable this when SDL consistently reports lost surfaces */
+#if 1 /* FIXME: enable this when SDL consistently reports lost surfaces */
 		if ( (flags & SDL_HWSURFACE) == SDL_HWSURFACE ) {
 			video->flags |= SDL_HWSURFACE;
 		} else {
