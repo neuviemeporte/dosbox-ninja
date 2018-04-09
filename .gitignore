@@ -1,0 +1,16 @@
+*.bak
+*.swp
+*.vcxproj.user
+UpgradeLog.htm
+winres.aps
+dosbox-0.74/visualc_net/.vs
+dosbox-0.74/visualc_net/Debug
+dosbox-0.74/visualc_net/Release
+SDL-1.2.15/VisualC/.vs
+SDL-1.2.15/VisualC/Backup
+SDL-1.2.15/VisualC/Debug
+SDL-1.2.15/VisualC/Release
+SDL-1.2.15/VisualC/SDL/Debug
+SDL-1.2.15/VisualC/SDL/Release
+SDL-1.2.15/VisualC/SDLmain/Debug
+SDL-1.2.15/VisualC/SDLmain/Release
