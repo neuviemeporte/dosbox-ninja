@@ -1,6 +1,7 @@
 *.bak
 *.swp
 *.vcxproj.user
+deploy
 UpgradeLog.htm
 winres.aps
 dosbox-0.74/visualc_net/.vs

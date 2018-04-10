@@ -114,6 +114,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <OutputFile>.\Release/dosbox.exe</OutputFile>
@@ -133,6 +134,12 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>set DEPLOY=..\..\deploy
+if not exist "%25DEPLOY%25" mkdir "%25DEPLOY%25"
+echo Copying $(TargetPath) to "%25DEPLOY%25"
+copy /y $(TargetPath) "%25DEPLOY%25"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\cpu\callback.cpp" />
