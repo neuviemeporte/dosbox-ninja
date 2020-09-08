@@ -60,6 +60,7 @@ public:
 	virtual void	InitNewMedia		(void) {};
 };	
 
+#ifdef BROKEN_SDL_FEATURES
 class CDROM_Interface_SDL : public CDROM_Interface
 {
 public:
@@ -87,6 +88,7 @@ private:
 	int		driveID;
 	Uint32	oldLeadOut;
 };
+#endif
 
 class CDROM_Interface_Fake : public CDROM_Interface
 {

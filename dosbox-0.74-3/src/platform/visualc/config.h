@@ -4,16 +4,16 @@
 #define C_DEBUG 0
 
 /* Define to 1 to enable screenshots, requires libpng */
-#define C_SSHOT 0 // TODO: reenable
+#define C_SSHOT 0 // FIXME: reenable
 
 /* Define to 1 to use opengl display output support */
 #define C_OPENGL 1
 
 /* Define to 1 to enable internal modem support, requires SDL_net */
-#define C_MODEM 0 // TODO: reenable
+#define C_MODEM 0 // FIXME: reenable
 
 /* Define to 1 to enable IPX networking support, requires SDL_net */
-#define C_IPX 0 // TODO: reenable
+#define C_IPX 0 // FIXME: reenable
 
 /* Enable some heavy debugging options */
 #define C_HEAVY_DEBUG 0

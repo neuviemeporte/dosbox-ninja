@@ -30,7 +30,9 @@
 #include "SDL.h"
 #include "support.h"
 #include "cdrom.h"
+#include "error.h"
 
+#ifdef BROKEN_SDL_FEATURES
 CDROM_Interface_SDL::CDROM_Interface_SDL(void) {
 	driveID		= 0;
 	oldLeadOut	= 0;
@@ -143,6 +145,7 @@ bool CDROM_Interface_SDL::LoadUnloadMedia(bool unload) {
 	bool success = (SDL_CDEject(cd)==0);
 	return success;
 }
+#endif // BROKEN_SDL_FEATURES
 
 int CDROM_GetMountType(char* path, int forceCD) {
 // 0 - physical CDROM
@@ -151,6 +154,9 @@ int CDROM_GetMountType(char* path, int forceCD) {
 	// 1. Smells like a real cdrom 
 	// if ((strlen(path)<=3) && (path[2]=='\\') && (strchr(path,'\\')==strrchr(path,'\\')) && 	(GetDriveType(path)==DRIVE_CDROM)) return 0;
 
+	throw BrokenException(" Attempt to figure out number of CD drives from SDL");
+
+	/* FIXME: reenable
 	const char* cdName;
 	char buffer[512];
 	strcpy(buffer,path);
@@ -175,6 +181,8 @@ int CDROM_GetMountType(char* path, int forceCD) {
 	struct stat file_stat;
 	if ((stat(path, &file_stat) == 0) && (file_stat.st_mode & S_IFREG)) return 1; 
 	return 2;
+	 */
+	return -1;
 }
 
 // ******************************************************

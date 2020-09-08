@@ -717,6 +717,9 @@
     <ClInclude Include="..\include\video.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\src\dosbox.ico" />
