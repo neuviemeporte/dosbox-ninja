@@ -1,6 +1,7 @@
 *.bak
 *.swp
 *.tar.gz
+*.zip
 *.vcxproj.user
 deploy
 UpgradeLog.htm
