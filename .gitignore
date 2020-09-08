@@ -1,5 +1,6 @@
 *.bak
 *.swp
+*.tar.gz
 *.vcxproj.user
 deploy
 UpgradeLog.htm
@@ -7,6 +8,9 @@ winres.aps
 dosbox-0.74/visualc_net/.vs
 dosbox-0.74/visualc_net/Debug
 dosbox-0.74/visualc_net/Release
+dosbox-0.74-3/visualc_net/.vs
+dosbox-0.74-3/visualc_net/Debug
+dosbox-0.74-3/visualc_net/Release
 SDL-1.2.15/VisualC/.vs
 SDL-1.2.15/VisualC/Backup
 SDL-1.2.15/VisualC/Debug
